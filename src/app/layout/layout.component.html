@@ -1,3 +1,11 @@
-<button class="btn btn-success" ngbTooltip="Thanks! :)">
-  Pass the cursor over me
-</button>
+<ngb-accordion #a="ngbAccordion" activeIds="panel-1" [closeOthers]="true">
+  <ngb-panel *ngFor="let panel of panels" [id]="panel.id">
+    <ng-template ngbPanelHeader>
+      <button ngbPanelToggle class="accordion-button">{{panel.title}}</button>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      {{panel.content}}
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
