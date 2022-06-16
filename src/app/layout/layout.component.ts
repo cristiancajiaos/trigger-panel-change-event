@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-layout',
@@ -17,5 +18,9 @@ export class LayoutComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  public onPanelChange(event: NgbPanelChangeEvent): void {
+    console.log(event);
+  }
 }

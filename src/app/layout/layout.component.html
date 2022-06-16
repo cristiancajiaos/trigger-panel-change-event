@@ -1,4 +1,7 @@
-<ngb-accordion #a="ngbAccordion" activeIds="panel-1" [closeOthers]="true">
+<ngb-accordion #a="ngbAccordion"
+               activeIds="panel-1"
+               [closeOthers]="true"
+               (panelChange)="onPanelChange($event)">
   <ngb-panel *ngFor="let panel of panels" [id]="panel.id">
     <ng-template ngbPanelHeader>
       <button ngbPanelToggle class="accordion-button">{{panel.title}}</button>
